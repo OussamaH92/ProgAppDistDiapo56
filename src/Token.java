@@ -15,7 +15,7 @@ public class Token {
     }
 
     public synchronized void isDoneA(){
-        while(!AB){
+        if(!AB){
             try {
                 wait();
             } catch (InterruptedException e) {
@@ -30,7 +30,7 @@ public class Token {
     }
 
     public synchronized void isDoneB(){
-        while(!BC){
+        if(!BC){
             try {
                 wait();
             } catch (InterruptedException e) {
@@ -45,7 +45,7 @@ public class Token {
     }
 
     public synchronized void isDoneD(){
-        while(!DE){
+        if(!DE){
             try {
                 wait();
             } catch (InterruptedException e) {
@@ -60,7 +60,7 @@ public class Token {
     }
 
     public synchronized void isDoneE(){
-        while(!EF){
+        if(!EF){
             try {
                 wait();
             } catch (InterruptedException e) {
